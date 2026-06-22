@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Arbia Clínica — Excelência em Dermatologia, Tricologia e Procedimentos Avançados. Agende sua consulta." />
+  <meta name="theme-color" content="#01241D" />
+  <title>Arbia Clínica | Dermatologia & Tricologia</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Reset & Base ─────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green-900: #01241D;
+      --green-700: #003E33;
+      --green-500: #005C4B;
+      --cream-100: #F3F4F1;
+      --cream-200: #F2EDE2;
+      --cream-300: #E8E0D0;
+      --gray-300:  #BFBEBE;
+      --gray-500:  #8A8A8A;
+      --gray-700:  #3C3C3B;
+      --white:     #FFFFFF;
+
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans:  'Inter', system-ui, sans-serif;
+
+      --radius-sm:  8px;
+      --radius-md:  14px;
+      --radius-lg:  24px;
+      --radius-full: 9999px;
+
+      --shadow-sm:  0 1px 4px rgba(1,36,29,.06);
+      --shadow-md:  0 4px 20px rgba(1,36,29,.10);
+      --shadow-lg:  0 8px 40px rgba(1,36,29,.14);
+
+      --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--cream-100);
+      color: var(--green-900);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Layout ───────────────────────────────────────────── */
+    .page {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 0 0 60px;
+    }
+
+    /* ── Hero ─────────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      background: var(--green-900);
+      overflow: hidden;
+      padding: 0 32px 52px;
+      text-align: center;
+    }
+
+    /* Decorative arc */
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0; right: 0;
+      height: 32px;
+      background: var(--cream-100);
+      border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    }
+
+    .hero-inner { position: relative; z-index: 1; }
+
+    /* ── Logo upload area ─────────────────────────────────── */
+    .logo-upload-area {
+      display: block;
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+
+    .logo-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      height: 110px;
+      border: 1.5px dashed rgba(242,237,226,.25);
+      border-radius: 12px;
+      transition: border-color .2s, background .2s;
+    }
+
+    .logo-upload-area:hover .logo-placeholder {
+      border-color: rgba(242,237,226,.5);
+      background: rgba(242,237,226,.05);
+    }
+
+    .logo-placeholder span {
+      font-size: .72rem;
+      font-weight: 400;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(242,237,226,.4);
+    }
+
+    .logo-img {
+      display: block;
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto 4px;
+      border-radius: 8px;
+    }
+
+    .hero-brand {
+      font-family: var(--font-serif);
+      font-size: 2.4rem;
+      font-weight: 400;
+      letter-spacing: .18em;
+      color: var(--cream-200);
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-serif);
+      font-size: .85rem;
+      font-weight: 300;
+      letter-spacing: .35em;
+      color: rgba(242,237,226,.6);
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .hero-divider {
+      width: 36px;
+      height: 1px;
+      background: rgba(242,237,226,.3);
+      margin: 0 auto 20px;
+    }
+
+    .hero-tagline {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 300;
+      font-style: italic;
+      color: rgba(242,237,226,.82);
+      line-height: 1.7;
+      letter-spacing: .02em;
+      max-width: 300px;
+      margin: 0 auto 12px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .68rem;
+      font-weight: 500;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: rgba(242,237,226,.5);
+      margin-top: 6px;
+    }
+
+    .hero-badge::before,
+    .hero-badge::after {
+      content: '';
+      display: block;
+      width: 18px;
+      height: 1px;
+      background: rgba(242,237,226,.3);
+    }
+
+    /* ── Main CTA Buttons ─────────────────────────────────── */
+    .cta-section {
+      padding: 36px 24px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .btn-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 18px 24px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-sans);
+      font-size: .88rem;
+      font-weight: 500;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-cta::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0);
+      transition: background var(--transition);
+    }
+
+    .btn-cta:hover::after { background: rgba(255,255,255,.07); }
+    .btn-cta:hover { transform: translateY(-2px); }
+    .btn-cta:active { transform: translateY(0); }
+
+    .btn-whatsapp {
+      background: var(--green-900);
+      color: var(--cream-200);
+      box-shadow: var(--shadow-md), 0 0 0 1px rgba(0,62,51,.2);
+    }
+    .btn-whatsapp:hover { box-shadow: var(--shadow-lg), 0 0 0 1px rgba(0,62,51,.3); }
+
+    .btn-location {
+      background: var(--cream-200);
+      color: var(--green-900);
+      box-shadow: var(--shadow-sm), 0 0 0 1px rgba(1,36,29,.08);
+    }
+    .btn-location:hover { box-shadow: var(--shadow-md), 0 0 0 1px rgba(1,36,29,.12); }
+
+    .btn-cta-icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      opacity: .85;
+    }
+
+    .btn-cta-text { flex: 1; text-align: center; }
+    .btn-cta-arrow { font-size: .75rem; opacity: .45; }
+
+    /* ── Section Label ────────────────────────────────────── */
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 24px;
+      margin: 28px 0 16px;
+    }
+
+    .section-label span {
+      font-size: .65rem;
+      font-weight: 500;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+      white-space: nowrap;
+    }
+
+    .section-label::before,
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--cream-300);
+    }
+
+    /* ── Secondary Buttons ────────────────────────────────── */
+    .links-section {
+      padding: 0 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .btn-link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 20px;
+      border-radius: var(--radius-md);
+      background: var(--white);
+      color: var(--green-900);
+      text-decoration: none;
+      border: 1px solid rgba(1,36,29,.07);
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    }
+
+    .btn-link:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(1,36,29,.14);
+    }
+
+    .btn-link:active { transform: translateY(0); }
+
+    .btn-link-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-sm);
+      background: var(--cream-100);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .btn-link-icon svg { width: 20px; height: 20px; }
+
+    .btn-link-body { flex: 1; }
+
+    .btn-link-title {
+      font-size: .84rem;
+      font-weight: 500;
+      color: var(--green-900);
+      letter-spacing: .02em;
+    }
+
+    .btn-link-desc {
+      font-size: .72rem;
+      color: var(--gray-500);
+      margin-top: 2px;
+      font-weight: 400;
+    }
+
+    .btn-link-arrow {
+      font-size: .75rem;
+      color: var(--gray-300);
+    }
+
+    /* ── Diferenciais Cards ───────────────────────────────── */
+    .diff-section {
+      padding: 0 24px;
+      margin-top: 32px;
+    }
+
+    .diff-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .diff-card {
+      background: var(--white);
+      border: 1px solid rgba(1,36,29,.06);
+      border-radius: var(--radius-md);
+      padding: 20px 16px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .diff-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .diff-card-icon {
+      width: 44px;
+      height: 44px;
+      margin: 0 auto 12px;
+      background: linear-gradient(135deg, var(--green-900) 0%, var(--green-500) 100%);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .diff-card-icon svg { width: 22px; height: 22px; color: var(--cream-200); }
+
+    .diff-card-title {
+      font-size: .78rem;
+      font-weight: 500;
+      color: var(--green-900);
+      letter-spacing: .03em;
+      line-height: 1.4;
+    }
+
+    .diff-card-desc {
+      font-size: .69rem;
+      color: var(--gray-500);
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+
+    /* Wide card */
+    .diff-card--wide {
+      grid-column: span 2;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-align: left;
+      padding: 18px 20px;
+    }
+
+    .diff-card--wide .diff-card-icon { flex-shrink: 0; margin: 0; }
+
+    /* ── Institutional ────────────────────────────────────── */
+    .institutional {
+      margin: 32px 24px 0;
+      padding: 28px 24px;
+      background: linear-gradient(135deg, var(--green-900) 0%, var(--green-700) 100%);
+      border-radius: var(--radius-lg);
+      color: var(--cream-200);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .institutional::before {
+      content: '"';
+      position: absolute;
+      top: -10px;
+      right: 20px;
+      font-family: var(--font-serif);
+      font-size: 8rem;
+      color: rgba(242,237,226,.06);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .institutional-eyebrow {
+      font-size: .65rem;
+      font-weight: 500;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: rgba(242,237,226,.5);
+      margin-bottom: 12px;
+    }
+
+    .institutional-text {
+      font-family: var(--font-serif);
+      font-size: 1.08rem;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.8;
+      color: rgba(242,237,226,.9);
+    }
+
+    .institutional-divider {
+      width: 28px;
+      height: 1px;
+      background: rgba(242,237,226,.25);
+      margin: 18px 0;
+    }
+
+    .institutional-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .75rem;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(242,237,226,.6);
+      text-decoration: none;
+      transition: color var(--transition);
+    }
+
+    .institutional-cta:hover { color: var(--cream-200); }
+
+    /* ── Social Strip ─────────────────────────────────────── */
+    .social-strip {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      padding: 28px 24px 0;
+    }
+
+    .social-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(1,36,29,.1);
+      background: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: var(--green-900);
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .social-btn:hover {
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: var(--shadow-md);
+    }
+
+    .social-btn svg { width: 20px; height: 20px; }
+
+    /* ── Footer ───────────────────────────────────────────── */
+    footer {
+      text-align: center;
+      padding: 32px 24px 20px;
+    }
+
+    .footer-address {
+      font-size: .75rem;
+      color: var(--gray-500);
+      line-height: 1.7;
+      margin-bottom: 6px;
+    }
+
+    .footer-phone {
+      font-size: .8rem;
+      color: var(--green-700);
+      font-weight: 500;
+      text-decoration: none;
+      letter-spacing: .03em;
+    }
+
+    .footer-copy {
+      font-size: .65rem;
+      color: var(--gray-300);
+      margin-top: 20px;
+      letter-spacing: .06em;
+    }
+
+    .footer-logo-text {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      letter-spacing: .18em;
+      color: var(--green-900);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+
+        /* ── Pulse animation on WhatsApp ──────────────────────── */
+    @keyframes pulse-ring {
+      0%   { box-shadow: var(--shadow-md), 0 0 0 0 rgba(1,36,29,.25); }
+      70%  { box-shadow: var(--shadow-md), 0 0 0 10px rgba(1,36,29,0); }
+      100% { box-shadow: var(--shadow-md), 0 0 0 0 rgba(1,36,29,0); }
+    }
+
+    .btn-whatsapp { animation: pulse-ring 2.8s ease-out infinite; }
+
+    /* ── Scroll fade-in ───────────────────────────────────── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .55s ease, transform .55s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Responsive tweaks ────────────────────────────────── */
+    @media (max-width: 380px) {
+      .hero-brand { font-size: 2rem; }
+      .diff-grid { grid-template-columns: 1fr; }
+      .diff-card--wide { grid-column: span 1; }
+    }
+  </style>
+</head>
+
+<body>
+<main class="page">
+
+  <!-- ═══════════════════════════════════════ HERO ══════ -->
+  <section class="hero">
+    <div class="hero-inner">
+
+      <!-- Área de upload da logo -->
+      <div class="logo-upload-area" id="logoArea" onclick="document.getElementById('logoInput').click()" title="Clique para enviar sua logo">
+        <input type="file" id="logoInput" accept="image/*" style="display:none" />
+        <img id="logoPreview" src="" alt="Clínica Arbia" class="logo-img" style="display:none" />
+        <div class="logo-placeholder" id="logoPlaceholder">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(242,237,226,.5)" stroke-width="1.4" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="3"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21 15 16 10 5 21"/>
+          </svg>
+          <span>Adicionar logo</span>
+        </div>
+      </div>
+
+      <div class="hero-divider"></div>
+      <p class="hero-tagline">Excelência em Dermatologia, Tricologia e Procedimentos Avançados.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CTA PRINCIPAL ══════ -->
+  <section class="cta-section">
+
+    <a href="https://wa.me/557730171011?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Arbia%20Cl%C3%ADnica."
+       class="btn-cta btn-whatsapp fade-up" target="_blank" rel="noopener">
+      <!-- WhatsApp icon -->
+      <svg class="btn-cta-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+      </svg>
+      <span class="btn-cta-text">Agendar Consulta</span>
+      <span class="btn-cta-arrow">→</span>
+    </a>
+
+    <a href="https://maps.app.goo.gl/sFwy19ix2t7naZxU6"
+       class="btn-cta btn-location fade-up" target="_blank" rel="noopener"
+       style="transition-delay:.08s">
+      <!-- Location icon -->
+      <svg class="btn-cta-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke-linejoin="round"/>
+        <circle cx="12" cy="9" r="2.5"/>
+      </svg>
+      <span class="btn-cta-text">Como Chegar</span>
+      <span class="btn-cta-arrow">→</span>
+    </a>
+
+  </section>
+
+  <!-- ═══════════════════════════ BOTÕES SECUNDÁRIOS ══════ -->
+  <div class="section-label fade-up" style="transition-delay:.1s">
+    <span>Explore</span>
+  </div>
+
+  <nav class="links-section" aria-label="Navegação principal">
+
+    <a href="galeria.html" class="btn-link fade-up" style="transition-delay:.13s">
+      <div class="btn-link-icon">
+        <!-- Building icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--green-900)" stroke-width="1.6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="2"/>
+          <path d="M3 9h18M9 21V9"/>
+        </svg>
+      </div>
+      <div class="btn-link-body">
+        <div class="btn-link-title">Nossa Estrutura</div>
+        <div class="btn-link-desc">Ambiente premium e acolhedor</div>
+      </div>
+      <span class="btn-link-arrow">›</span>
+    </a>
+
+    <a href="#dermatologia" class="btn-link fade-up" style="transition-delay:.16s">
+      <div class="btn-link-icon">
+        <!-- Sparkle / medical icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--green-900)" stroke-width="1.6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+        </svg>
+      </div>
+      <div class="btn-link-body">
+        <div class="btn-link-title">Procedimentos Dermatológicos</div>
+        <div class="btn-link-desc">Tratamentos avançados para a pele</div>
+      </div>
+      <span class="btn-link-arrow">›</span>
+    </a>
+
+    <a href="#tricologia" class="btn-link fade-up" style="transition-delay:.19s">
+      <div class="btn-link-icon">
+        <!-- Leaf / hair icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--green-900)" stroke-width="1.6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 22C6 16 4 10 6 6c2-3 6-4 9-2s4 7 2 11" stroke-linecap="round"/>
+          <path d="M12 22c0-4 1-8 4-11" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="btn-link-body">
+        <div class="btn-link-title">Tratamentos Capilares</div>
+        <div class="btn-link-desc">Saúde e estética dos fios</div>
+      </div>
+      <span class="btn-link-arrow">›</span>
+    </a>
+
+    <a href="#equipe" class="btn-link fade-up" style="transition-delay:.22s">
+      <div class="btn-link-icon">
+        <!-- People icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--green-900)" stroke-width="1.6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="9" cy="7" r="3"/>
+          <path d="M3 20v-1a6 6 0 0112 0v1"/>
+          <path d="M16 3.13a4 4 0 010 7.75M22 20v-1a4 4 0 00-3-3.87" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="btn-link-body">
+        <div class="btn-link-title">Corpo Clínico</div>
+        <div class="btn-link-desc">Médicos especialistas certificados</div>
+      </div>
+      <span class="btn-link-arrow">›</span>
+    </a>
+
+  </nav>
+
+  <!-- ═══════════════════════════════ DIFERENCIAIS ══════ -->
+  <div class="section-label fade-up" style="transition-delay:.24s">
+    <span>Diferenciais</span>
+  </div>
+
+  <section class="diff-section fade-up" style="transition-delay:.26s" aria-label="Diferenciais da clínica">
+    <div class="diff-grid">
+
+      <div class="diff-card">
+        <div class="diff-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="2" y="3" width="20" height="14" rx="2"/>
+            <path d="M8 21h8M12 17v4" stroke-linecap="round"/>
+            <path d="M6 8l3 3-3 3M11 14h4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="diff-card-title">Tecnologia Avançada</div>
+        <div class="diff-card-desc">Equipamentos de última geração</div>
+      </div>
+
+      <div class="diff-card">
+        <div class="diff-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+        <div class="diff-card-title">Atendimento Personalizado</div>
+        <div class="diff-card-desc">Cuidado centrado em você</div>
+      </div>
+
+      <div class="diff-card">
+        <div class="diff-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          </svg>
+        </div>
+        <div class="diff-card-title">Equipe Especializada</div>
+        <div class="diff-card-desc">Médicos com formação CRM</div>
+      </div>
+
+      <div class="diff-card">
+        <div class="diff-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div class="diff-card-title">Segurança &amp; Conforto</div>
+        <div class="diff-card-desc">Protocolos médicos rigorosos</div>
+      </div>
+
+      <div class="diff-card diff-card--wide">
+        <div class="diff-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <div>
+          <div class="diff-card-title">Estrutura Premium</div>
+          <div class="diff-card-desc">Ambiente exclusivo projetado para proporcionar conforto e privacidade total durante o seu atendimento.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ INSTITUCIONAL ══════ -->
+  <section class="institutional fade-up" style="transition-delay:.3s" aria-labelledby="inst-heading">
+    <div class="institutional-eyebrow" id="inst-heading">Sobre a Clínica</div>
+    <p class="institutional-text">
+      A Arbia Clínica nasceu da convicção de que saúde e beleza caminham juntas. Com um corpo clínico de excelência e tecnologia de ponta, oferecemos tratamentos dermatológicos e tricológicos em um ambiente que une sofisticação, acolhimento e rigor científico.
+    </p>
+    <div class="institutional-divider"></div>
+    <a href="https://wa.me/557730171011?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Arbia%20Cl%C3%ADnica."
+       class="institutional-cta" target="_blank" rel="noopener">
+      Fale conosco
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </a>
+  </section>
+
+  <!-- ═══════════════════════════════════ SOCIAL ══════ -->
+  <div class="social-strip fade-up" style="transition-delay:.34s">
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/drafabiolafraga" class="social-btn" target="_blank" rel="noopener" aria-label="Instagram da Arbia Clínica">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+      </svg>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/557730171011" class="social-btn" target="_blank" rel="noopener" aria-label="WhatsApp da Arbia Clínica">
+      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" opacity=".8"/>
+      </svg>
+    </a>
+
+    <!-- Phone -->
+    <a href="tel:+5500000000000" class="social-btn" aria-label="Telefone da Arbia Clínica">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.18 2.22 2 2 0 012.16 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke-linejoin="round"/>
+      </svg>
+    </a>
+
+  </div>
+
+  <!-- ═══════════════════════════════════ FOOTER ══════ -->
+  <footer>
+    <span class="footer-logo-text">Arbia</span>
+    <p class="footer-address">
+      Empresarial Juvenal Leão — Rua Leôncio Santos, 275<br>
+      Recreio, Vitória da Conquista — BA · 2º Andar
+    </p>
+    <a href="tel:+557730171011" class="footer-phone">(77) 3017-1011</a>
+    <p class="footer-copy">© 2025 Arbia Clínica Médica. Todos os direitos reservados.</p>
+  </footer>
+
+
+</main>
+
+<script>
+  // Intersection Observer — fade-up on scroll
+  const observer = new IntersectionObserver(
+    entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }),
+    { threshold: 0.12 }
+  );
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Upload de logo
+  const input       = document.getElementById('logoInput');
+  const preview     = document.getElementById('logoPreview');
+  const placeholder = document.getElementById('logoPlaceholder');
+
+  input.addEventListener('change', function () {
+    const file = this.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = e => {
+      preview.src = e.target.result;
+      preview.style.display = 'block';
+      placeholder.style.display = 'none';
+    };
+    reader.readAsDataURL(file);
+  });
+</script>
+</body>
+</html>
