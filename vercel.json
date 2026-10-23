@@ -1,0 +1,6 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/bio", "destination": "/instagram", "permanent": true }
+  ]
+}
