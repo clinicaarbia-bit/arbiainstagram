@@ -1,6 +1,7 @@
 {
   "cleanUrls": true,
   "redirects": [
-    { "source": "/bio", "destination": "/instagram", "permanent": true }
+    { "source": "/bio", "destination": "/instagram", "permanent": true },
+    { "source": "/blog/oxigenoterapia-hiperbarica-para-que-serve", "destination": "/blog", "permanent": true }
   ]
 }

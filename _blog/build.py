@@ -46,7 +46,7 @@ MESES = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho",
 
 ESPECIALISTAS = {
     "Dra. Fabíola Fraga": {
-        "cargo": "Dermatologista pela SBD · Cirurgia Dermatológica e Medicina Estética (SBCD) · Médica hiperbarista (SBMH)",
+        "cargo": "Dermatologista pela SBD · Cirurgia Dermatológica e Medicina Estética (SBCD)",
         "instagram": "https://www.instagram.com/fabiolafraga.dermato/",
     },
     "Dr. Roberto do Carmo": {
@@ -190,7 +190,7 @@ HEAD = """<!doctype html>
 </head>
 <body>
 <header class="top">
-  <a class="brand" href="/" aria-label="Clínica ARBIA — página inicial"><small>Clínica</small>ARBIA</a>
+  <a class="brand" href="/" aria-label="Clínica ARBIA — página inicial"><img src="/logo-arbia-verde.png" alt="Clínica ARBIA" width="105" height="36"></a>
   <nav aria-label="Principal">
     <a href="/">Início</a>
     <a href="/blog"{blog_cur}>Blog</a>
@@ -201,7 +201,7 @@ HEAD = """<!doctype html>
 
 FOOT = """<footer class="foot">
   <div>
-    <a class="brand" href="/"><small>Clínica</small>ARBIA</a>
+    <a class="brand" href="/"><img src="/logo-arbia-creme.png" alt="Clínica ARBIA" width="140" height="48"></a>
     <p>Dermatologia, Tricologia, Angiologia e Transplante Capilar em Vitória da Conquista, BA.</p>
   </div>
   <address>
@@ -210,7 +210,7 @@ FOOT = """<footer class="foot">
     Vitória da Conquista, BA<br>
     <a href="tel:+557730171011">(77) 3017-1011</a> · <a href="https://www.instagram.com/clinicaarbia/">@clinicaarbia</a>
   </address>
-  <p class="legal">© {ano} Clínica ARBIA. Conteúdo informativo, não substitui a consulta médica. Responsável técnico: CRM a confirmar.</p>
+  <p class="legal">© {ano} Clínica ARBIA. Conteúdo informativo, não substitui a consulta médica. Responsável técnica: Dra. Fabíola Cristina da Silva Fraga · CRM 20.375.</p>
 </footer>
 </body>
 </html>
@@ -320,7 +320,7 @@ def card(o):
 def render_index(posts):
     url = f"{SITE}/blog"
     desc = ("Artigos da Clínica Arbia sobre pele, cabelo e circulação: dermatologia, tricologia, "
-            "transplante capilar, angiologia e medicina hiperbárica em Vitória da Conquista.")
+            "transplante capilar e angiologia em Vitória da Conquista.")
     ld = {
         "@context": "https://schema.org",
         "@type": "Blog",

@@ -21,8 +21,10 @@ body { margin: 0; background: var(--white); color: var(--text); font: 400 17px/1
 a { color: var(--green-500); }
 img { max-width: 100%; }
 
-.brand { display: inline-flex; flex-direction: column; text-decoration: none; color: var(--text); font-weight: 600; letter-spacing: .22em; font-size: 20px; line-height: 1; }
-.brand small { font-size: 9px; letter-spacing: .4em; color: var(--wood); font-weight: 500; margin-bottom: 4px; }
+.brand { display: inline-flex; line-height: 0; }
+.brand img { display: block; width: auto; }
+.top .brand img { height: 36px; }
+.foot .brand img { height: 48px; }
 
 .top { position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px clamp(16px, 4vw, 40px); background: rgba(255,255,255,.92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
 .top nav { display: flex; align-items: center; gap: clamp(10px, 2.4vw, 28px); font-size: 15px; font-weight: 600; }
@@ -93,7 +95,6 @@ article li { margin: 6px 0; }
 .rel > h2 { font-size: 24px; }
 
 .foot { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 24px; padding: 40px clamp(16px, 4vw, 40px); background: var(--green-900); color: var(--cream); font-size: 15px; }
-.foot .brand { color: var(--cream); }
 .foot p, .foot address { margin: 12px 0 0; font-style: normal; color: rgba(242,237,226,.8); }
 .foot a { color: var(--cream); }
 .foot .legal { grid-column: 1 / -1; font-size: 13px; border-top: 1px solid rgba(242,237,226,.15); padding-top: 18px; margin: 0; }

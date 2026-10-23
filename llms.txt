@@ -1,6 +1,6 @@
 # Clínica ARBIA
 
-> Clínica de Dermatologia, Tricologia, Transplante Capilar, Angiologia e Medicina Hiperbárica em Vitória da Conquista, Bahia. Conta com centro cirúrgico próprio, Hospital Day para cirurgias de médicos parceiros e tecnologia de purificação do ar, única na cidade.
+> Clínica de Dermatologia, Tricologia, Transplante Capilar e Angiologia em Vitória da Conquista, Bahia. Conta com centro cirúrgico próprio, Hospital Day para cirurgias de médicos parceiros e tecnologia de purificação do ar, única na cidade.
 
 - Site: https://www.clinicaarbia.com.br/
 - Endereço: Empresarial Juvenal Leão, 2º andar, Rua Leôncio Santos, 275, Recreio, Vitória da Conquista, BA
@@ -13,12 +13,11 @@
 - Dermatologia clínica, cirúrgica e estética: consultas, tratamentos de pele, toxina botulínica e procedimentos com avaliação individualizada. Com Dra. Fabíola Fraga e Dr. Roberto do Carmo.
 - Tricologia e Transplante Capilar: diagnóstico e tratamento da queda de cabelo e da saúde do couro cabeludo; transplante capilar no centro cirúrgico da clínica. Com Dr. Roberto do Carmo.
 - Angiologia: tratamento de vasinhos e varizes, cirurgia vascular e endovascular. Com Dra. Vanessa Lins.
-- Medicina Hiperbárica: oxigenoterapia hiperbárica conduzida por médica hiperbarista pela SBMH. Com Dra. Fabíola Fraga.
 - Tratamentos corporais, incluindo o Protocolo Rennova Summer Shape para glúteos.
 
 ## Corpo clínico
 
-- Dra. Fabíola Fraga: dermatologista pela SBD; especialista em Cirurgia Dermatológica e Medicina Estética pela SBCD; médica hiperbarista pela SBMH. Instagram: https://www.instagram.com/fabiolafraga.dermato/
+- Dra. Fabíola Fraga: dermatologista pela SBD; especialista em Cirurgia Dermatológica e Medicina Estética pela SBCD. Instagram: https://www.instagram.com/fabiolafraga.dermato/
 - Dr. Roberto do Carmo: formado pela UFPEL; especialista em Dermatologia; Tricologia Médica e Transplante Capilar. Instagram: https://www.instagram.com/drrobertocarmo/
 - Dra. Vanessa Lins: formada pela UESB; especialista em Angiologia, Cirurgia Vascular e Endovascular, com foco em tratamento de varizes. Instagram: https://www.instagram.com/vanessa.llins/
 
@@ -42,5 +41,4 @@
 - [Toxina botulínica: mitos e verdades sobre o tratamento](https://www.clinicaarbia.com.br/blog/toxina-botulinica-mitos-e-verdades): A toxina botulínica suaviza rugas de expressão relaxando músculos específicos. Veja o que é mito e verdade sobre efeito, duração e segurança.
 - [Queda de cabelo: quando é normal e quando procurar um tricologista](https://www.clinicaarbia.com.br/blog/queda-de-cabelo-quando-procurar-tricologista): Perder até cerca de 100 fios por dia é normal. Saiba identificar quando a queda de cabelo merece avaliação e o que o tricologista investiga.
 - [Pintas na pele: a regra do ABCDE e quando fazer o exame com dermatologista](https://www.clinicaarbia.com.br/blog/pintas-quando-examinar): Saiba usar a regra do ABCDE para observar pintas, quais mudanças merecem atenção e por que o exame anual da pele com dermatologista é importante.
-- [Oxigenoterapia hiperbárica: o que é, para que serve e como é a sessão](https://www.clinicaarbia.com.br/blog/oxigenoterapia-hiperbarica-para-que-serve): Na oxigenoterapia hiperbárica, o paciente respira oxigênio puro em uma câmara pressurizada. Veja as principais indicações e como funciona o tratamento.
 - [Melasma: por que as manchas no rosto voltam e como controlar](https://www.clinicaarbia.com.br/blog/melasma-manchas-no-rosto): Melasma é uma mancha escura crônica no rosto ligada a sol, luz visível e hormônios. Entenda as causas, os tratamentos e por que o controle é contínuo.
